@@ -98,7 +98,7 @@ if (contactForm) {
 
       const data = await response.json();
       // console.log("Message sent:", data);
-
+       contactForm.reset();
       // Close contact modal
       if (contactModal) contactModal.hidden = true;
       if (contactToggle) contactToggle.setAttribute('aria-expanded', 'false');
@@ -192,3 +192,4 @@ logo?.addEventListener("click", (e) => {
   navLinks?.classList.remove("active");
   menuToggle.textContent = "☰";
 });
+
