@@ -98,7 +98,7 @@ if (contactForm) {
 
       const data = await response.json();
       // console.log("Message sent:", data);
-       contactForm.reset();
+
       // Close contact modal
       if (contactModal) contactModal.hidden = true;
       if (contactToggle) contactToggle.setAttribute('aria-expanded', 'false');
@@ -148,8 +148,14 @@ function openOrganic() {
 
 // Open via text span or button
 document.querySelectorAll('.modal-trigger').forEach(el => {
-  el.addEventListener('click', openOrganic);
+ el.addEventListener('mouseover', openOrganic);
+  el.addEventListener('mouseleave', () => {
+    if (organicDialog && typeof organicDialog.close === 'function') {
+      organicDialog.close();
+    }
+  });
 });
+
 const testBtn = document.getElementById('testModalBtn');
 if (testBtn) testBtn.addEventListener('click', openOrganic);
 
@@ -192,4 +198,3 @@ logo?.addEventListener("click", (e) => {
   navLinks?.classList.remove("active");
   menuToggle.textContent = "☰";
 });
-
