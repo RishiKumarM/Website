@@ -99,7 +99,27 @@ h3 {
 .carousel-image.active {
   opacity: 1;
 }
+.tooltip-text {
+  position: absolute;
+  bottom: 125%; /* Above the trigger */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
 
+.modal-trigger:hover .tooltip-text,
+.modal-trigger.active .tooltip-text {
+  opacity: 1;
+}
 
 .hero-content {
   position: absolute;
@@ -617,4 +637,5 @@ dialog.dialog-modal .modal-content {
   cursor: pointer;
   color: #333;
 }
+
 
