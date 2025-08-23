@@ -132,6 +132,7 @@ if (returnHome && thankYouModal) {
 
 // ===== Organic Farming Dialog =====
 const organicDialog = document.getElementById('organicModal');
+const secondaryTrigger = document.getElementById('open-organic-from-other');
 
 function closeModal() {
   if (organicDialog && typeof organicDialog.close === 'function') {
@@ -144,6 +145,10 @@ function openOrganic() {
   if (organicDialog && typeof organicDialog.showModal === 'function') {
     organicDialog.showModal();
   }
+}
+window.openOrganic = openOrganic; 
+if (secondaryTrigger) {
+  secondaryTrigger.addEventListener('click', openOrganic);
 }
 
 // Open via text span or button
@@ -197,3 +202,4 @@ logo?.addEventListener("click", (e) => {
   navLinks?.classList.remove("active");
   menuToggle.textContent = "☰";
 });
+
