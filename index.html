@@ -90,8 +90,11 @@
               Solutions:</strong>
             <span style="font-family: 'Roboto', sans-serif;">Our smart tools and digital platforms help farmers optimize
               their workflow, improve productivity, and embrace modern farming practices.
-              We also support <span class="modal-trigger" style="color: #c5e1a5; font-weight: bold; cursor: pointer;">
-                Organic Farming </span> by providing data-driven insights, eco-friendly resource planning, and
+              We also support <span class="modal-trigger"
+                style="color: #c5e1a5; font-weight: bold; cursor: pointer; position: relative;">
+                Organic Farming
+                <span class="tooltip-text">Click to read more about Organic Farming </span>
+              </span> by providing data-driven insights, eco-friendly resource planning, and
               sustainable growth strategies tailored for natural cultivation.</span>
           </li>
           <li style="margin-bottom: 1rem;">
@@ -162,19 +165,26 @@
           <h2 id="organicTitle" style="color: #c5e1a5;">What is Organic Farming?</h2>
           <button type="button" onclick="closeModal()" aria-label="Close modal" class="close-button">&times;</button>
         </header>
-         <!-- 🌿 Image Section -->
+        <!-- 🌿 Image Section -->
+        <figure style="margin: 0; padding: 0;">
+          <img src="image/What is organic farm.png" alt="Farmer using tech in organic farming"
+            style="width: 100%; border-radius: 8px;" />
+          <figcaption style="text-align: center; font-size: 0.9rem; color: #c5e1a5;">Tech meets tradition: Organic
+            farming with smart tools</figcaption>
+        </figure>
+        <h3 style="color: #aed581;">Future Tech Farming:</h3>
         <figure style="margin: 0; padding: 0;">
           <img src="image/The Future of Farmin.png" alt="Farmer using tech in organic farming"
             style="width: 100%; border-radius: 8px;" />
           <figcaption style="text-align: center; font-size: 0.9rem; color: #c5e1a5;">Tech meets tradition: Organic
             farming with smart tools</figcaption>
         </figure>
-
         <section>
           <p style="color: #e8f5e9; font-size: 1rem; line-height: 1.6;">
             Organic farming is a sustainable method that avoids synthetic chemicals, focusing on natural inputs like
             compost, crop rotation, and biological pest control.
           </p>
+
           <h3 style="color: #aed581;">Benefits:</h3>
           <ul>
             <li>Improves soil fertility and water retention</li>
@@ -190,10 +200,17 @@
             <li>Adopt drip irrigation and mulching for water efficiency</li>
             <li>Join certification programs like NPOP or PKVY</li>
           </ul>
+          <!-- 📩 Contact Us Button -->
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a id="contact-toggle" class="contact-button" aria-expanded="false" aria-controls="contact-modal"
+              onclick="closeModal()"
+              style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #c5e1a5; color: #1b5e20; font-weight: bold; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease;">
+              📩 Contact Us
+            </a>
+          </div>
         </section>
       </article>
     </dialog>
-
     <section id="contact-section">
       <div id="contact-modal" class="modal" hidden>
         <div class="modal-content">
@@ -358,6 +375,7 @@
 </body>
 
 </html>
+
 
 
 
