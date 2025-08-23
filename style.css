@@ -134,24 +134,82 @@ h3 {
 .cta-button:hover {
   background: #0097a7;
 }
-
 /* ------------------ Services Section ------------------ */
+/* .container {
+  
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  text-align: center;
+} */
+
+h3 {
+  font-size: 2rem;
+  color: #f0f4ff;
+  margin-bottom: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-align: center;
-  color: #fff;
+  background: linear-gradient(135deg, #4d6ab8, #e0f7fa);
+  border-radius: 12px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #a8c6db, #f195b4);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  transform: rotate(45deg);
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  color: #cbd2e5;
+}
+
+.service-card:hover::after {
+  opacity: 1;  
+}
+
+.service-card h4 {
+  font-size: 1.4rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.service-card:hover p {
+  color: #111212;
+  font-weight: bold;
 }
 
 /* ------------------ Team Section ------------------ */
@@ -452,7 +510,10 @@ dialog.dialog-modal .modal-content {
   color: #fff;
 }
 
+
+
 @media (max-width: 768px) {
+  
   .nav-links {
     display: none;
     flex-direction: column;
