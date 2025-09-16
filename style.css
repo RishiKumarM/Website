@@ -1,6 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* block extra horizontal space */
 }
 /* ------------------ Global Styles ------------------ */
 body {
@@ -650,6 +656,7 @@ dialog.dialog-modal .modal-content {
   cursor: pointer;
   color: #333;
 }
+
 
 
 
