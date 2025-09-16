@@ -420,7 +420,16 @@ dialog.dialog-modal[open] {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;   /* ✅ Fix: lock to viewport */
+  top: 0;            /* ✅ Cover full screen */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;         /* ✅ Prevent shifting */
+  padding: 0;
+  z-index: 2000;
 }
+
 
 dialog.dialog-modal::backdrop {
   background: rgba(0, 0, 0, 0.7);
@@ -637,5 +646,6 @@ dialog.dialog-modal .modal-content {
   cursor: pointer;
   color: #333;
 }
+
 
 
